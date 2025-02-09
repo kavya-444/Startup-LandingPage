@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #0056b3;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: url('startup-bg.webp') no-repeat center center/cover;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3em;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .cta {
+            background: #ff4081;
+            color: white;
+            padding: 15px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+        .feature {
+            background: white;
+            margin: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+            }
+            .burger {
+                display: block;
+            }
+            .features {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">StartupX</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h1>Welcome to StartupX</h1>
+        <p>Innovative solutions for a brighter future</p>
+        <a href="#contact" class="cta">Get Started</a>
+    </section>
+    
+    <section id="features" class="features">
+        <div class="feature">
+            <h2>Feature One</h2>
+            <p>Discover the power of our cutting-edge technology.</p>
+        </div>
+        <div class="feature">
+            <h2>Feature Two</h2>
+            <p>Seamlessly integrate with your existing workflow.</p>
+        </div>
+        <div class="feature">
+            <h2>Feature Three</h2>
+            <p>Experience unparalleled performance and reliability.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 StartupX. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        document.querySelector('.burger')?.addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
